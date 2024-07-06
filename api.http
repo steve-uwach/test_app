@@ -1,0 +1,22 @@
+######################################################################################
+# @name create_user_with_items
+POST http://localhost:8000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "is_active": true,
+    "password": "password",
+    "username": "jdoe",
+    "items": [
+        {
+            "owner_id": 1,
+            "title": "Item 1",
+            "description": "Item Description 1"
+        },
+        {
+            "owner_id": 1,
+            "title": "Item 2",
+            "description": "Item Description 2"
+        }
+    ]
+}
